@@ -3,11 +3,20 @@
  */
 package com.accenture.employee.details.business.vo;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * @author j.venugopalan
  *
  */
+
+
+@Document
 public class Employee {
+	
+	@Id
+	private long id;
 	private Integer employeeId;
 	private String employeeName;
 	private String employeeAddress;
