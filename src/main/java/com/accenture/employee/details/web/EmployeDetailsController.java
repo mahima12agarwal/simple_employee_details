@@ -26,6 +26,7 @@ public class EmployeDetailsController {
 /*		Employee emp = new Employee();
 		emp = employeeDetailsService.getEmployeeDetails(employeeId);
 		return emp;*/
+		System.out.println("result = " + repository.findByEmployeeId(employeeId));
 		return repository.findByEmployeeId(employeeId);
 	}
 
