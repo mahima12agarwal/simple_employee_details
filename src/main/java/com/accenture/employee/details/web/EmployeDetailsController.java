@@ -1,5 +1,7 @@
 package com.accenture.employee.details.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,14 +22,15 @@ public class EmployeDetailsController {
 	private EmployeeRepository repository;
 	
 	@RequestMapping(value="/employees/{employeeId}")
-	public Employee getEmployeeDetails(@PathVariable ("employeeId") Integer employeeId){
+	public List<Employee> getEmployeeDetails(@PathVariable ("employeeId") Integer employeeId){
 		System.out.println("inside getEmployeeDetails");
 		System.out.println("employee Id = " + employeeId);
 /*		Employee emp = new Employee();
 		emp = employeeDetailsService.getEmployeeDetails(employeeId);
 		return emp;*/
 		System.out.println("result = " + repository.findByEmployeeId(employeeId));
-		return repository.findByEmployeeId(employeeId);
+		//return repository.findByEmployeeId(employeeId);
+		return repository.findAll();
 	}
 
 }
