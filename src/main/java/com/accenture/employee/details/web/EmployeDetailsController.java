@@ -21,6 +21,8 @@ public class EmployeDetailsController {
 	
 	@RequestMapping(value="/employees/{employeeId}")
 	public Employee getEmployeeDetails(@PathVariable ("employeeId") Integer employeeId){
+		System.out.println("inside getEmployeeDetails");
+		System.out.println("employee Id = " + employeeId);
 /*		Employee emp = new Employee();
 		emp = employeeDetailsService.getEmployeeDetails(employeeId);
 		return emp;*/
@@ -28,3 +30,4 @@ public class EmployeDetailsController {
 	}
 
 }
+					
