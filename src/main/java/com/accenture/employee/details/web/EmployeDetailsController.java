@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.accenture.employee.details.business.EmployeeDetailsService;
+import com.accenture.employee.details.business.repository.EmployeeRepository;
 import com.accenture.employee.details.business.vo.Employee;
 
 @RestController
@@ -15,11 +16,15 @@ public class EmployeDetailsController {
 	@Autowired
 	EmployeeDetailsService employeeDetailsService;
 	
+	@Autowired
+	private EmployeeRepository repository;
+	
 	@RequestMapping(value="/employees/{employeeId}")
 	public Employee getEmployeeDetails(@PathVariable ("employeeId") Integer employeeId){
-		Employee emp = new Employee();
+/*		Employee emp = new Employee();
 		emp = employeeDetailsService.getEmployeeDetails(employeeId);
-		return emp;
+		return emp;*/
+		return repository.findByEmployeeId(employeeId);
 	}
 
 }

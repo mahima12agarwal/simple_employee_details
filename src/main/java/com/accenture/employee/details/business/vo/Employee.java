@@ -11,6 +11,13 @@ public class Employee {
 	private Integer employeeId;
 	private String employeeName;
 	private String employeeAddress;
+	
+	
+	public Employee(Integer employeeId) {
+		super();
+		this.employeeId = employeeId;
+	}
+
 	public Employee(Integer employeeId, String employeeName, String employeeAdress) {
 		super();
 		this.employeeId = employeeId;
