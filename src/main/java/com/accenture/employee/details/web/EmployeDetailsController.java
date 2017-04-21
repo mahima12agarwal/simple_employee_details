@@ -22,15 +22,10 @@ public class EmployeDetailsController {
 	private EmployeeRepository repository;
 	
 	@RequestMapping(value="/employees/{employeeId}")
-	public List<Employee> getEmployeeDetails(@PathVariable ("employeeId") Integer employeeId){
+	public Employee getEmployeeDetails(@PathVariable ("employeeId") Integer employeeId){
 		System.out.println("inside getEmployeeDetails");
 		System.out.println("employee Id = " + employeeId);
-/*		Employee emp = new Employee();
-		emp = employeeDetailsService.getEmployeeDetails(employeeId);
-		return emp;*/
-		//System.out.println("result = " + repository.findByEmployeeId(employeeId));
-		//return repository.findByEmployeeId(employeeId);
-		return repository.findAll();
+		return repository.findByEmployeeId(employeeId);
 	}
 
 }
