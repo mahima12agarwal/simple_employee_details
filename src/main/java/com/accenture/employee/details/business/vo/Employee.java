@@ -3,6 +3,8 @@
  */
 package com.accenture.employee.details.business.vo;
 
+import java.math.BigInteger;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,7 +18,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Employee {
 	
 	@Id
-	private long id;
+	private BigInteger id;
 	private Integer employeeId;
 	private String employeeName;
 	private String employeeAddress;
