@@ -23,7 +23,7 @@ public class EmployeeDetailsAgrregator {
 		Employee emp = new Employee();
 		emp.setEmployeeId(id);
 		emp.setEmployeeName("Victor Sam");
-		emp.setEmployeeAdress("New Jersey, US");
+		emp.setEmployeeAddress("New Jersey, US");
 		return emp;
 	}
 

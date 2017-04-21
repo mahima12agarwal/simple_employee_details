@@ -27,15 +27,16 @@ public class Employee {
 		this.employeeId = employeeId;
 	}
 
-	public Employee(Integer employeeId, String employeeName, String employeeAdress) {
+	public Employee(Integer employeeId, String employeeName, String employeeAddress) {
 		super();
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
-		this.employeeAddress = employeeAdress;
+		this.employeeAddress = employeeAddress;
 	}
 	public Employee() {
 		super();
 	}
+	
 	public Integer getEmployeeId() {
 		return employeeId;
 	}
@@ -48,15 +49,15 @@ public class Employee {
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
 	}
-	public String getEmployeeAdress() {
+	public String getEmployeeAddress() {
 		return employeeAddress;
 	}
-	public void setEmployeeAdress(String employeeAdress) {
-		this.employeeAddress = employeeAdress;
+	public void setEmployeeAddress(String employeeAddress) {
+		this.employeeAddress = employeeAddress;
 	}
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeAdress="
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeAddress="
 				+ employeeAddress + "]";
 	}
 	
