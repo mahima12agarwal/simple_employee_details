@@ -8,10 +8,10 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-@EnableCircuitBreaker
-@EnableHystrix
-@EnableHystrixDashboard 
+//@EnableDiscoveryClient
+//@EnableCircuitBreaker
+//@EnableHystrix
+//@EnableHystrixDashboard 
 /**
  * 
  * @author j.venugopalan
